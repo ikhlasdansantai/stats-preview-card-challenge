@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(233, 47%, 7%);
+  margin: auto;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+  padding: 50px;
+  font-size: 15px;
+  flex-wrap: wrap;
+}
+.container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+}
+.attribution a {
+  color: hsl(277, 64%, 61%);
+  text-decoration: none;
+}
+.attribution a:active {
+  text-decoration: underline;
+}
+.card {
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: hsl(244, 38%, 16%);
+}
+.card-img {
+  width: 100%;
+  height: 250px;
+  background-image: url(../images/image-header-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: 99;
+}
+.card-img::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: hsl(277, 64%, 61%);
+  opacity: 0.5;
+  z-index: 10;
+}
+.card-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  padding: 0 30px;
+  color: hsl(0, 0%, 100%);
+  font-family: "Inter", sans-serif;
+}
+.card-header .title {
+  font-size: 1.7em;
+  font-family: "Inter", sans-serif;
+}
+.card-header span {
+  color: hsl(277, 64%, 61%);
+}
+.card-header p.mini-info {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 0.9em;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.card-info-1 {
+  margin: 20px 0;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  font-family: "Inter", sans-serif;
+}
+.card-info-1 p {
+  color: hsla(0, 0%, 100%, 0.6);
+  text-transform: uppercase;
+}
+.card-info-wrapper p {
+  margin-top: 10px;
+}
+@media (max-width: 576px) {
+  .attribution {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .card {
+    width: 70%;
+    margin: auto;
+    flex-direction: row;
+  }
+  .card-img {
+    background-image: url(../images/image-header-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 470px;
+    width: 450px;
+    flex: 1.7;
+    order: 2;
+  }
+  .card-header {
+    width: 51%;
+    height: 450px;
+    padding: 40px 40px;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .card-header .title {
+    font-size: 2.2em;
+  }
+  .card-header p.mini-info {
+    font-size: 1em;
+    width: 70% !important;
+    align-self: flex-start;
+  }
+  .title {
+    width: 80%;
+  }
+  .card-info-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    text-align: left;
+  }
+}
